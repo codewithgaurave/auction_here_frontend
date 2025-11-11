@@ -68,25 +68,6 @@ const DashboardLayout = () => {
           toggleTheme={toggleTheme}
         />
 
-        <div
-          className="flex items-center justify-end gap-3 px-6 py-3 border-b"
-          style={{ borderColor: themeColors.border, backgroundColor: themeColors.surface }}
-        >
-          <div className="text-sm" style={{ color: themeColors.textSecondary }}>
-            Signed in as{" "}
-            <span className="font-semibold" style={{ color: themeColors.text }}>
-              {admin?.name || admin?.adminId || "Admin"}
-            </span>
-          </div>
-          <button
-            onClick={handleLogout}
-            className="px-3 py-2 rounded-md text-sm font-medium transition hover:opacity-90"
-            style={{ backgroundColor: themeColors.danger, color: themeColors.onPrimary }}
-          >
-            Logout
-          </button>
-        </div>
-
         {/* Page Content */}
         <main className="flex-1 overflow-y-auto p-6" style={{ backgroundColor: themeColors.background }}>
           <Outlet /> 
